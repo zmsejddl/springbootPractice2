@@ -2,6 +2,8 @@ package com.mysite.sbb2.answer;
 
 import java.time.LocalDateTime;
 
+import org.springframework.data.annotation.CreatedDate;
+
 import com.mysite.sbb2.question.Question;
 
 import jakarta.persistence.Column;
@@ -24,6 +26,7 @@ public class Answer {
 	@Column(columnDefinition = "TEXT")
 	private String content;
 
+	@CreatedDate
 	private LocalDateTime createDate;
 
 	@ManyToOne
