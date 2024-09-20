@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import org.springframework.data.annotation.CreatedDate;
 
 import com.mysite.sbb2.question.Question;
+import com.mysite.sbb2.user.SiteUser;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,4 +32,7 @@ public class Answer {
 
 	@ManyToOne
 	private Question question;
+
+	@ManyToOne
+	private SiteUser author;
 }
